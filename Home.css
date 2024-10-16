@@ -1,4 +1,3 @@
-/* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap");
 
 :root {
@@ -22,7 +21,7 @@
 }
 
 body {
-    padding-top: 60px; /* Adjust this if your header is taller */
+    padding-top: 60px;
     color: var(--text-color);
     font-family: var(--font-family-2);
 }
@@ -49,13 +48,12 @@ section {
     width: 100%;
 }
 
-/* Navbar Styles */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--bg-color); /* Ensures the navbar has a background */
+    background-color: var(--bg-color);
     z-index: 100;
     padding: 10px 0;
 }
@@ -90,7 +88,7 @@ header {
 }
 
 .nav-link:hover {
-    color: var(--main-color); /* Hover effect */
+    color: var(--main-color);
 }
 
 .content {
@@ -98,10 +96,11 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center; /* Centers the content horizontally */
+    align-items: center;
+    padding-top: 80px;
+    margin-top: 15px;
 }
 
-/* Consolidated .post-card class */
 .post-card {
     background-color: white;
     padding: 15px;
@@ -111,54 +110,54 @@ header {
     position: relative;
 }
 
-.user-info {  
-    display: flex;  
-    align-items: center;  
-    gap: 10px;  
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.user-photo {  
-    width: 50px;  
-    height: 50px;  
-    border-radius: 50%;  
+.user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
-.user-details {  
-    flex: 1;  
-}
-.post-content {  
-    margin-top: 5px;  
+.user-details {
+    flex: 1;
 }
 
-.post-image {  
-    width: 100%;  
-    max-height: 400px;  
-    object-fit: cover;  
-    margin-bottom: 10px;  
-    border-radius: 10px;  
+.post-content {
+    margin-top: 5px;
 }
 
-.actions {  
-    display: flex;  
-    justify-content: space-between;  
-    margin-top: 10px;  
+.post-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
-.like-btn, .comment-btn, .connect-btn {  
-    background-color: #040404;  
-    color: rgb(248, 245, 245);  
-    padding: 10px;  
-    border: none;  
-    border-radius: 5px;  
-    cursor: pointer;  
-    margin-right: 10px;  
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
-.like-btn:hover, .comment-btn:hover, .connect-btn:hover {  
-    background-color: rgb(11, 11, 11);  
+.like-btn, .comment-btn, .connect-btn {
+    background-color: #040404;
+    color: rgb(248, 245, 245);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
-/* Responsive styles */
+.like-btn:hover, .comment-btn:hover, .connect-btn:hover {
+    background-color: rgb(11, 11, 11);
+}
+
 @media only screen and (max-width: 768px) {
     .content {
         padding: 10px;
@@ -177,15 +176,11 @@ header {
     }
 }
 
-  
-
-
-
 .hamburger {
-    display: none; 
-    font-size: 30px; 
-    cursor: pointer; 
-    padding: 10px; 
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -194,12 +189,12 @@ header {
     }
 
     .nav-links {
-        display: none; 
-        flex-direction: column; 
-        position: absolute; 
+        display: none;
+        flex-direction: column;
+        position: absolute;
         background-color: var(--bg-color);
         width: 100%;
-        top: 60px; 
+        top: 60px;
         left: 0;
     }
 
