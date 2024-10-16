@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish</title>
+    <link href="Publish.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.9/css/boxicons.min.css">
+</head>
+<body>
+    <header>  
+        <div class="navbar">  
+           <a href="#" class="logo">CAMPUS CONNECT</a>  
+           <div class="hamburger" id="hamburger">
+               <i class='bx bx-menu'></i>
+           </div>
+           <ul class="nav-links">  
+              <li><a href="Home.html" class="nav-link">HOME</a></li>  
+              <li><a href="publish.html" class="nav-link">PUBLISH</a></li>  
+              <li><a href="Rankings.html" class="nav-link">RANKINGS</a></li>  
+              <li><a href="Profile.html" class="nav-link">PROFILE</a></li>  
+           </ul>  
+        </div>  
+     </header>
+    <div class="publish-container">  
+        <div class="upload-section">  
+           <div class="upload-icon">+</div>  
+           <p>Upload any photos/videos</p>  
+        </div>  
+        <div class="input-section">  
+           <input type="file" id="file-upload" />
+        </div>  
+        <div class="input-section">  
+           <input type="text" placeholder="Add description">  
+        </div>  
+        <div class="input-section">  
+           <input type="text" placeholder="Add Links">  
+        </div>  
+        <button class="submit-btn">Send Request</button>  
+     </div>
+     <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+    
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
