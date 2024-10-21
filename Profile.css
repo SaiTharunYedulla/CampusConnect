@@ -157,6 +157,14 @@ header {
 
     .nav-links.active {
         display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--bg-color);
+        width: 100%;
+        top: 60px;
+        left: 0;
+        gap: 15px;
+        padding: 10px 0;
     }
 
     .container {
@@ -180,4 +188,8 @@ header {
     margin: 8%;
 
 
+}
+
+#yourposts{
+    margin-bottom: 20px;
 }
