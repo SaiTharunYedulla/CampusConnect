@@ -49,7 +49,6 @@ section {
 }
 
 header {
-    height: 60px; /* Fixed height for the header */
     position: fixed;
     top: 0;
     left: 0;
@@ -98,7 +97,7 @@ header {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    padding-top: 70px; /* Adjusted for header height */
+    padding-top: 80px;
     margin-top: 15px;
 }
 
@@ -162,14 +161,14 @@ header {
 
 @media only screen and (max-width: 768px) {
     .content {
-        padding-top: 80px; /* Keep it the same for mobile */
+        padding: 10px;
     }
     .post-card {
-        max-width: 100%; /* Ensure cards fit within the screen */
+        max-width: 400px;
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 428px) {
     .content {
         padding: 5px;
     }
@@ -210,9 +209,10 @@ header {
         left: 0;
         gap: 15px;
         padding: 10px 0;
+
     }
 }
 
-#deft {
+#deft{
     font-size: 12px;
 }
