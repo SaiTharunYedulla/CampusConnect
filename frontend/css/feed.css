@@ -1,0 +1,22 @@
+.feed-card {
+  display: grid;
+  gap: 12px;
+}
+
+.feed-card .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+}
+
+.feed-card .actions {
+  display: flex;
+  gap: 10px;
+}
+
+.tag-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}

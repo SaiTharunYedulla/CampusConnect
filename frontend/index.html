@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampusConnect | Public Feed</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: #f5f7fb;
+        color: #1e293b;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .container {
+        width: 92%;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      /* NAVBAR */
+
+      .navbar {
+        background: white;
+        border-bottom: 1px solid #e2e8f0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: #2563eb;
+      }
+
+      .nav-buttons {
+        display: flex;
+        gap: 12px;
+      }
+
+      .btn {
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn-primary {
+        background: #2563eb;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: #1d4ed8;
+      }
+
+      .btn-outline {
+        background: white;
+        border: 1px solid #cbd5e1;
+      }
+
+      .btn-outline:hover {
+        background: #f1f5f9;
+      }
+
+      /* HERO */
+
+      .hero {
+        padding: 70px 0 50px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+        margin-bottom: 18px;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        max-width: 700px;
+        margin: auto;
+        color: #64748b;
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      .hero-buttons {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+      }
+
+      /* STATS */
+
+      .stats {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .stat-card {
+        background: white;
+        padding: 28px;
+        border-radius: 14px;
+        border: 1px solid #e2e8f0;
+      }
+
+      .stat-card h2 {
+        font-size: 34px;
+        color: #2563eb;
+        margin-bottom: 10px;
+      }
+
+      .stat-card p {
+        color: #64748b;
+      }
+
+      /* FEED */
+
+      .feed-section {
+        padding: 60px 0;
+      }
+
+      .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 28px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .feed-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 24px;
+      }
+
+      .feed-card {
+        background: white;
+        border-radius: 16px;
+        border: 1px solid #e2e8f0;
+        padding: 22px;
+        transition: 0.3s;
+      }
+
+      .feed-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
+      }
+
+      .profile {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: #2563eb;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+      }
+
+      .profile h4 {
+        font-size: 16px;
+      }
+
+      .profile span {
+        font-size: 13px;
+        color: #64748b;
+      }
+
+      .score {
+        background: #dcfce7;
+        color: #166534;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .feed-card h3 {
+        margin-bottom: 12px;
+        line-height: 1.5;
+      }
+
+      .feed-card p {
+        color: #64748b;
+        line-height: 1.7;
+        margin-bottom: 18px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .tag {
+        background: #eff6ff;
+        color: #2563eb;
+        padding: 7px 12px;
+        border-radius: 30px;
+        font-size: 13px;
+      }
+
+      .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #e2e8f0;
+        padding-top: 16px;
+        color: #64748b;
+        font-size: 14px;
+      }
+
+      /* RESPONSIVE */
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 38px;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
+        }
+
+        .section-title {
+          flex-direction: column;
+          gap: 14px;
+          align-items: flex-start;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+      <div class="container nav-content">
+        <div class="logo">CampusConnect</div>
+
+        <div class="nav-buttons">
+          <a href="login.html">
+            <button class="btn btn-outline">Login</button>
+          </a>
+
+          <a href="register.html">
+            <button class="btn btn-primary">Register</button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container">
+        <h1>
+          Student Professional Portfolio <br />
+          & Teacher Approval Platform
+        </h1>
+
+        <p>
+          Showcase student achievements professionally with faculty-reviewed
+          public posts, rankings, communities, and academic recognition.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="register.html">
+            <button class="btn btn-primary">Get Started</button>
+          </a>
+
+          <a href="#feed">
+            <button class="btn btn-outline">Explore Feed</button>
+          </a>
+        </div>
+
+        <div class="stats">
+          <div class="stat-card">
+            <h2>12K+</h2>
+            <p>Approved Posts</p>
+          </div>
+
+          <div class="stat-card">
+            <h2>450+</h2>
+            <p>Faculty Reviewers</p>
+          </div>
+
+          <div class="stat-card">
+            <h2>98%</h2>
+            <p>Student Engagement</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEED -->
+
+    <section class="feed-section" id="feed">
+      <div class="container">
+        <div class="section-title">
+          <h2>Public Feed</h2>
+
+          <button class="btn btn-outline">
+            View All
+          </button>
+        </div>
+
+        <div class="feed-grid" id="publicFeed"></div>
+      </div>
+    </section>
+
+    <script>
+      const posts = [
+        {
+          name: "Sai Tharun",
+          dept: "CSE",
+          score: 95,
+          title: "Built AI-Powered ERP System",
+          desc: "Developed a full ERP platform with WhatsApp automation and AI integrations for educational institutions.",
+          tags: ["AI", "ERP", "NodeJS"],
+          upvotes: 482,
+        },
+
+        {
+          name: "Rahul",
+          dept: "ECE",
+          score: 92,
+          title: "IoT Smart Agriculture Project",
+          desc: "Created an IoT-based monitoring system for smart irrigation and crop management.",
+          tags: ["IoT", "Arduino"],
+          upvotes: 264,
+        },
+
+        {
+          name: "Ananya",
+          dept: "CSE",
+          score: 97,
+          title: "AI Interview Assistant",
+          desc: "Built a recruitment assistant using Gemini APIs and resume analysis workflows.",
+          tags: ["AI", "LLM", "Resume"],
+          upvotes: 530,
+        },
+      ];
+
+      const feed = document.getElementById("publicFeed");
+
+      feed.innerHTML = posts
+        .map(
+          (post) => `
+        
+        <div class="feed-card">
+
+          <div class="top">
+
+            <div class="profile">
+              <div class="avatar">
+                ${post.name.charAt(0)}
+              </div>
+
+              <div>
+                <h4>${post.name}</h4>
+                <span>${post.dept} Department</span>
+              </div>
+            </div>
+
+            <div class="score">
+              ${post.score}/100
+            </div>
+
+          </div>
+
+          <h3>${post.title}</h3>
+
+          <p>${post.desc}</p>
+
+          <div class="tags">
+            ${post.tags
+              .map((tag) => `<div class="tag">#${tag}</div>`)
+              .join("")}
+          </div>
+
+          <div class="card-footer">
+            <span>▲ ${post.upvotes} Upvotes</span>
+            <span>Faculty Approved</span>
+          </div>
+
+        </div>
+        
+        `,
+        )
+        .join("");
+    </script>
+  </body>
+</html>

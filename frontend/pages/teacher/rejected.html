@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rejected Posts</title>
+    <link rel="stylesheet" href="../../css/variables.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components.css" />
+    <link rel="stylesheet" href="../../css/dashboard.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Teacher Console</h2>
+        <nav>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="pending.html">Pending</a>
+          <a href="approved.html">Approved</a>
+          <a class="active" href="rejected.html">Rejected</a>
+          <a href="analytics.html">Analytics</a>
+          <a href="leaderboard.html">Leaderboard</a>
+        </nav>
+      </aside>
+      <main class="main">
+        <h2 style="font-family: var(--font-serif); margin-bottom: 16px">
+          Rejected Submissions
+        </h2>
+        <div id="rejectedList" class="grid"></div>
+      </main>
+    </div>
+    <script src="../../js/utils.js"></script>
+    <script src="../../js/teacher/rejected.js"></script>
+  </body>
+</html>

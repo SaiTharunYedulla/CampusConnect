@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pending Approvals</title>
+    <link rel="stylesheet" href="../../css/variables.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components.css" />
+    <link rel="stylesheet" href="../../css/dashboard.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Teacher Console</h2>
+        <nav>
+          <a href="dashboard.html">Dashboard</a>
+          <a class="active" href="pending.html">Pending</a>
+          <a href="approved.html">Approved</a>
+          <a href="rejected.html">Rejected</a>
+          <a href="analytics.html">Analytics</a>
+          <a href="leaderboard.html">Leaderboard</a>
+        </nav>
+      </aside>
+      <main class="main">
+        <h2 style="font-family: var(--font-serif); margin-bottom: 16px">
+          Pending Reviews
+        </h2>
+        <div id="pendingList" class="grid"></div>
+        <div id="modal" class="modal hidden">
+          <div class="modal-content">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+              "
+            >
+              <h3 style="font-family: var(--font-serif); font-size: 22px">
+                Review Post
+              </h3>
+              <button
+                onclick="closeModal()"
+                style="
+                  background: none;
+                  border: none;
+                  font-size: 28px;
+                  cursor: pointer;
+                  color: var(--muted);
+                "
+              >
+                &times;
+              </button>
+            </div>
+            <p
+              id="modalTitle"
+              style="font-size: 18px; font-weight: 600; margin-bottom: 8px"
+            ></p>
+            <p
+              id="modalAuthor"
+              style="color: var(--muted); margin-bottom: 16px"
+            ></p>
+            <div class="input" style="margin-bottom: 16px">
+              <label>Score (0-100)</label>
+              <input
+                id="scoreInput"
+                type="number"
+                min="0"
+                max="100"
+                placeholder="85"
+              />
+            </div>
+            <div class="input" style="margin-bottom: 16px">
+              <label>Feedback</label>
+              <textarea
+                id="feedbackInput"
+                rows="4"
+                placeholder="Great work! Here are suggestions..."
+              ></textarea>
+            </div>
+            <div style="display: flex; gap: 12px">
+              <button class="btn btn-success" onclick="handleApprove()">
+                Approve
+              </button>
+              <button class="btn btn-danger" onclick="handleReject()">
+                Reject
+              </button>
+              <button class="btn btn-outline" onclick="closeModal()">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/api.js"></script>
+    <script src="../../js/utils.js"></script>
+    <script src="../../js/teacher/pending.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f0f4f9;
+  --card: #ffffff;
+  --card-strong: #ffffff;
+  --accent: #0f5a99;
+  --accent-light: #e6f2ff;
+  --accent-2: #00a86b;
+  --danger: #dc2626;
+  --warning: #f59e0b;
+  --success: #10b981;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --shadow:
+    0 4px 6px rgba(15, 23, 42, 0.07), 0 10px 20px rgba(15, 23, 42, 0.08);
+  --shadow-lg:
+    0 10px 25px rgba(15, 23, 42, 0.12), 0 20px 40px rgba(15, 23, 42, 0.15);
+  --radius: 14px;
+  --font-sans: "Space Grotesk", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-serif: "Source Serif 4", "Palatino Linotype", "Book Antiqua", serif;
+}

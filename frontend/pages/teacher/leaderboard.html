@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="../../css/variables.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components.css" />
+    <link rel="stylesheet" href="../../css/dashboard.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Teacher Console</h2>
+        <nav>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="pending.html">Pending</a>
+          <a href="approved.html">Approved</a>
+          <a href="rejected.html">Rejected</a>
+          <a href="analytics.html">Analytics</a>
+          <a class="active" href="leaderboard.html">Leaderboard</a>
+        </nav>
+      </aside>
+      <main class="main">
+        <h2 style="font-family: var(--font-serif); margin-bottom: 16px">
+          Top Students
+        </h2>
+        <div id="teacherLeaderboard" class="grid"></div>
+        <div style="margin-top: 20px; display: flex; gap: 12px;">
+          <button class="btn btn-outline" id="downloadPdf">Download PDF</button>
+          <button class="btn btn-outline" id="downloadExcel">Download Excel</button>
+        </div>
+          <a class="btn btn-outline" href="../../backend/reports/excel?top=10"
+            >Download Excel</a
+          >
+        </div>
+      </main>
+    </div>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/api.js"></script>
+    <script src="../../js/utils.js"></script>
+    <script src="../../js/teacher/leaderboard.js"></script>
+  </body>
+</html>

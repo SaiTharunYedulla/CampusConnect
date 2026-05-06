@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create Post</title>
+    <link rel="stylesheet" href="../../css/variables.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components.css" />
+    <link rel="stylesheet" href="../../css/dashboard.css" />
+    <link rel="stylesheet" href="../../css/auth.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Student Hub</h2>
+        <nav>
+          <a href="dashboard.html">Dashboard</a>
+          <a class="active" href="create-post.html">Create Post</a>
+          <a href="my-posts.html">My Posts</a>
+          <a href="leaderboard.html">Leaderboard</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="communities.html">Communities</a>
+          <a href="profile.html">Profile</a>
+        </nav>
+      </aside>
+      <main class="main">
+        <form id="createPostForm" class="card" enctype="multipart/form-data">
+          <h2 class="card-title">Submit Achievement</h2>
+          <div class="input">
+            <label>Title</label>
+            <input name="title" type="text" required />
+          </div>
+          <div class="input">
+            <label>Description</label>
+            <textarea name="description" rows="4" required></textarea>
+          </div>
+          <div class="input">
+            <label>Hashtags (comma separated)</label>
+            <input name="hashtags" type="text" />
+          </div>
+          <div class="input">
+            <label>Category</label>
+            <input name="category" type="text" />
+          </div>
+          <div class="input">
+            <label>Upload Media</label>
+            <input name="media" type="file" multiple />
+          </div>
+          <button class="btn btn-primary" type="submit">
+            Submit for Review
+          </button>
+        </form>
+      </main>
+    </div>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/utils.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/student/createPost.js"></script>
+  </body>
+</html>

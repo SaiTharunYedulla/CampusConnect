@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="../../css/variables.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components.css" />
+    <link rel="stylesheet" href="../../css/dashboard.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Student Hub</h2>
+        <nav>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="create-post.html">Create Post</a>
+          <a href="my-posts.html">My Posts</a>
+          <a href="leaderboard.html">Leaderboard</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="communities.html">Communities</a>
+          <a class="active" href="profile.html">Profile</a>
+        </nav>
+      </aside>
+      <main class="main">
+        <div class="card">
+          <h2 id="profileName" class="card-title">Student Name</h2>
+          <p id="profileDept"></p>
+          <p>Total Points: 0</p>
+          <p>Approved Posts: 0</p>
+        </div>
+      </main>
+    </div>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/api.js"></script>
+    <script src="../../js/utils.js"></script>
+    <script src="../../js/student/profile.js"></script>
+  </body>
+</html>

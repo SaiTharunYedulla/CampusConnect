@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Analytics</title>
+    <link rel="stylesheet" href="../../css/variables.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components.css" />
+    <link rel="stylesheet" href="../../css/dashboard.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Teacher Console</h2>
+        <nav>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="pending.html">Pending</a>
+          <a href="approved.html">Approved</a>
+          <a href="rejected.html">Rejected</a>
+          <a class="active" href="analytics.html">Analytics</a>
+          <a href="leaderboard.html">Leaderboard</a>
+        </nav>
+      </aside>
+      <main class="main">
+        <h2 style="font-family: var(--font-serif); margin-bottom: 16px">
+          Department Performance
+        </h2>
+        <div id="deptStats" class="grid"></div>
+        <div class="card" style="margin-top: 20px">
+          <h3 class="card-title">Average Scores by Department</h3>
+          <canvas id="deptChart" height="120"></canvas>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/api.js"></script>
+    <script src="../../js/utils.js"></script>
+    <script src="../../js/teacher/analytics.js"></script>
+  </body>
+</html>
